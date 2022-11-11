@@ -30,7 +30,7 @@ I do't use the default configure mentioned in 9.2.3.3. Writing the uEnv.txt file
 ## Step 6: config tftp on you host computer
 Just find a guide on internet. it's very easy.
 
-## Step 6 : start run application
+## Step 7 : start run application
 I manually input the loading script after u-boot is on.
 There are 2 methods to load img file:
 ### 1, store all the file needed in SD card and use follwing commands:
