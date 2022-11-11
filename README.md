@@ -15,7 +15,7 @@ Just follow 2.7. Build Your Application.
 ## Step 4 : generate img file 
 Reference to https://docs.rtems.org/branches/master/user/bsps/arm/beagle.html#bsp-arm-beagleboneblack. 
 
-Mainly use following commands:
+Mainly use following commands:  
 arm-rtems6-objcopy hello.exe -O binary app.bin  
 gzip -9 app.bin  
 mkimage -A arm -O linux -T kernel -a 0x80000000 -e 0x80000000 -n RTEMS -d app.bin.gz rtems-app.img  
