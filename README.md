@@ -42,11 +42,17 @@ There are 2 methods to load img file:
     > bootm 0x80800000 – 0x88000000  
 
 #### 2, use tftp to transmit the files into Beaglebone
+    > Put img and dtb file in your tftp root folder on your host PC. Then input following command in u-boot console.
     > tftpboot  0x80800000 rtems-app.img  
     > tftpboot 0x88000000 am335x-boneblack.dtb  
     > bootm 0x80800000 – 0x88000000  
+    
+    
+
 
 ## Then the application is up and you can see the console will print 'hello'.
-
-
+### Reference pages:
+https://uditagarwal.in/building-and-testing-rtems-libbsd-for-beaglebone-black-bsp/  
+https://jamesfitzsimons.com/2020/06/29/rtems-on-beaglebone-black-wireless/  
+https://devel.rtems.org/wiki/Boards/Beagle%20Board
 
