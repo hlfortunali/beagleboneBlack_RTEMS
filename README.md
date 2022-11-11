@@ -21,11 +21,11 @@ gzip -9 app.bin
 mkimage -A arm -O linux -T kernel -a 0x80000000 -e 0x80000000 -n RTEMS -d app.bin.gz rtems-app.img  
 
 ## Step 5 : Boot configure
-    >### Generate u-boot with SD card
-    >I use the default SD card with U-boot installed.
+    > ### Generate u-boot with SD card
+    > I use the default SD card with U-boot installed.
 
-    >### generate uEnv.txt
-    >I do't use the default configure mentioned in 9.2.3.3. Writing the uEnv.txt file.
+    > ### generate uEnv.txt
+    > I do't use the default configure mentioned in 9.2.3.3. Writing the uEnv.txt file.
 
 ## Step 6: config tftp on you host computer
 Just find a guide on internet. it's very easy.
@@ -33,18 +33,18 @@ Just find a guide on internet. it's very easy.
 ## Step 7 : start run application
 I manually input the loading script after u-boot is on.
 There are 2 methods to load img file:
-    >### 1, store all the file needed in SD card and use follwing commands:
+    > ### 1, store all the file needed in SD card and use follwing commands:
 
-    >Both rtems-app.img and am335x-boneblack.dtb are needed.
+    > Both rtems-app.img and am335x-boneblack.dtb are needed.
 
-    >fatload mmc 0 0x80800000 rtems-app.img  
-    >fatload mmc 0 0x88000000 am335x-boneblack.dtb  
-    >bootm 0x80800000 – 0x88000000  
+    > fatload mmc 0 0x80800000 rtems-app.img  
+    > fatload mmc 0 0x88000000 am335x-boneblack.dtb  
+    > bootm 0x80800000 – 0x88000000  
 
-    >### 2, use tftp to transmit the files into Beaglebone
-    >tftpboot  0x80800000 rtems-app.img  
-    >tftpboot 0x88000000 am335x-boneblack.dtb  
-    >bootm 0x80800000 – 0x88000000  
+    > ### 2, use tftp to transmit the files into Beaglebone
+    > tftpboot  0x80800000 rtems-app.img  
+    > tftpboot 0x88000000 am335x-boneblack.dtb  
+    > bootm 0x80800000 – 0x88000000  
 
 ## Then the application is up and you can see the console will print 'hello'.
 
