@@ -37,14 +37,14 @@ There are 2 methods to load img file:
 
   Both rtems-app.img and am335x-boneblack.dtb are needed.
 
-  fatload mmc 0 0x80800000 rtems-app.img 
-  fatload mmc 0 0x88000000 am335x-boneblack.dtb
-   bootm 0x80800000 – 0x88000000
+  fatload mmc 0 0x80800000 rtems-app.img  
+  fatload mmc 0 0x88000000 am335x-boneblack.dtb  
+   bootm 0x80800000 – 0x88000000  
 
   ### 2, use tftp to transmit the files into Beaglebone
-  tftpboot  0x80800000 rtems-app.img
-  tftpboot 0x88000000 am335x-boneblack.dtb
-  bootm 0x80800000 – 0x88000000
+  tftpboot  0x80800000 rtems-app.img  
+  tftpboot 0x88000000 am335x-boneblack.dtb  
+  bootm 0x80800000 – 0x88000000  
 
 ## Then the application is up and you can see the console will print 'hello'.
 
