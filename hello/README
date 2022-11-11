@@ -1,0 +1,3 @@
+# guide
+Use the comple_hello.sh to compile the application and generate img file.   
+You need to change the path in the sh file according to your own host configure.
