@@ -21,10 +21,10 @@ gzip -9 app.bin
 mkimage -A arm -O linux -T kernel -a 0x80000000 -e 0x80000000 -n RTEMS -d app.bin.gz rtems-app.img  
 
 ## Step 5 : Boot configure
-    > ### Generate u-boot with SD card
+### Generate u-boot with SD card
     > I use the default SD card with U-boot installed.
 
-    > ### generate uEnv.txt
+### generate uEnv.txt
     > I do't use the default configure mentioned in 9.2.3.3. Writing the uEnv.txt file.
 
 ## Step 6: config tftp on you host computer
